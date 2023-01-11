@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using POS.Model;
 using POS.Services;
 
 namespace POS.Controllers

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
-using POS.Model;
+﻿using POS.Model;
 
 namespace POS.Services
 {
