@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using POS.Model;
+using POS.Services;
 
 namespace POS.Controllers
 {
@@ -6,10 +8,18 @@ namespace POS.Controllers
     [Route("[controller]")]
     public class BillingController : Controller
     {
+        private readonly IBillingService _billingService;
+
+        public BillingController(IBillingService billingService)
+        {
+            _billingService = billingService;
+        }
+
         [HttpGet(Name = "GetTotalBill")]
         public IActionResult Get()
         {
-            int TotalBill = 450;
+            double TotalBill = _billingService.GetTotalBill();
+            
             return Ok(TotalBill);
         }
     }

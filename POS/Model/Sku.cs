@@ -6,5 +6,6 @@
         public int ItemId { get; set; }
         public int ItemQty { get; set; }
         public int PricePerQty { get; set; }
+        public int DealId { get; set; }
     }
 }
